@@ -1,0 +1,39 @@
+.content(ng-controller='userController')
+  .row
+    .wrapper.col-md-6
+      .header
+        .header-title
+          a(href='' ng-click='backToBanking()')
+            span.fa.fa-hand-o-left
+            span Back to future banking
+        .info
+          button.btn Sign out
+            i.fa.fa-sign-out
+      .body
+        section.user-profile
+          .user-info
+            span.image
+              img(src='{{user.pic}}' alt='{{user.name}}\'s picture' width='100')
+            span
+              h3 {{user.name}} 
+          p {{user.description}}
+          table
+              tbody
+                tr
+                  td
+                    span Account Name:
+                  td
+                    span
+                      strong {{user.account.name | _:'capitalize'}}
+                tr
+                  td
+                    span Account Number:
+                  td
+                    span
+                      strong {{user.account.number}}
+                tr
+                  td
+                    span Current Balance:
+                  td
+                    span
+                      strong {{user.account.balance | currency}}

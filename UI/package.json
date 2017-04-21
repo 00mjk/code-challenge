@@ -1,0 +1,27 @@
+{
+  "name": "code-challenge",
+  "version": "0.0.0",
+  "author": "Sid Joshi <sidjoshi@hotmail.ca>",
+  "description": "Code challenge",
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.6.1",
+    "angular-ui-router": "^0.4.2",
+    "babel-preset-es2015": "^6.22.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.1",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.4",
+    "lodash": "^4.17.4"
+  }
+}

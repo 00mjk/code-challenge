@@ -1,0 +1,16 @@
+{
+  "name": "code-challenge-server",
+  "version": "0.0.0",
+  "description": "RESTful API server with endpoints to retrieve user information",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Sid Joshi <sidjoshi@hotmail.ca>",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "lodash": "^4.17.4"
+  }
+}

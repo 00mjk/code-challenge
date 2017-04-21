@@ -1,0 +1,151 @@
+.content{
+  background: url('images/background.jpg') no-repeat center center / cover;
+  overflow-x: hidden;
+
+  .row{
+    min-height: 100vh;
+    @extend .flex-column;
+    justify-content: center;
+
+    .notification{
+      text-align: center;
+      i{
+        float:right;
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+    }
+
+    .wrapper{
+      background: $WHITE;
+      margin: 0 auto;
+      border-top: 3px solid $GREY;
+      margin: 0 auto;
+      
+      .header{
+        @extend .flex-row;
+        @extend .border-bottom;
+        justify-content: space-between;
+
+        .header-title{
+          font-size: 30px;
+          span{
+            padding: 10px 5px;
+            font-weight: 200;
+          }
+        }
+
+        .info{
+          padding: 10px 5px;
+          @extend .flex-row;
+
+          button{
+            background: $WHITE;
+            border: 1px solid $GREY;
+
+            img{
+              margin:0 5px;
+              border-radius: 4px;
+            }
+
+            span{
+              vertical-align: middle;
+            }
+
+            &:last-child{
+              i{
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+      }
+      .body{
+        margin-top:20px;
+
+        span.title{
+          font-size: 18px;
+          margin-left: 10px;
+        }
+        
+        table{
+          width: 100%;
+          margin: 10px 0px;
+          tr{
+            background: $TABLEBG;
+            width: 100%;
+            border-bottom: 1px solid $WHITE;
+            td{
+              width: 50%;
+              padding:10px;
+            }
+          }
+        }
+        .account-details{
+          @extend .border-bottom;
+          @extend .section-sapcing;
+        }
+        .transfer-details{
+          @extend .border-bottom;
+          @extend .section-sapcing;
+
+          input.error{
+            border: 1px solid $ERROR;
+            box-shadow: inset 0 1px 1px $ERROR;
+          }
+
+          span.error{
+            color: $ERROR;
+            display: block;
+            margin-top:5px
+          }
+        }
+        .transferee-details{
+          @extend .border-bottom;
+          @extend .section-sapcing;
+
+          .transferee{          
+            @extend .flex-row;
+            margin:20px 0 5px; 
+            justify-content: space-between;
+
+          .info{
+            span{
+              display: inline-block;
+              vertical-align: middle;
+
+              &:first-child{
+                border: 1px solid $IMGBORDER;
+                border-radius: 50%;
+                margin-right:20px;
+                box-shadow: 0 1px 4px rgba(0,0,0,.5);
+              }
+
+              h3{
+                margin:0;
+              }
+
+              img{
+                padding: 5px;
+                border-radius: 50%;
+              }
+            }
+          }
+          .change-transferee{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          }
+        }
+      }
+      .footer{
+        @extend .section-sapcing;
+        .form-submit{
+          @extend .flex-row;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+};

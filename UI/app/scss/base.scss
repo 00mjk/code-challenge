@@ -1,0 +1,33 @@
+@import 'bootstrap.scss';
+
+$WHITE: #FFF;
+$GREY: #CCC;
+$TABLEBG: #f7f7f7;
+$IMGBORDER: #999;
+$ERROR: #EF4123;
+
+.flex{
+  display: flex;
+}
+
+.flex-row{
+  @extend .flex;
+  flex-direction: row;
+}
+
+.flex-column{
+  @extend .flex;
+  flex-direction: column;
+}
+
+.border-bottom{
+  border-bottom: 1px solid $GREY;    
+}
+
+.section-sapcing{
+  margin-top:10px;
+  padding-bottom: 10px;
+}
+
+@import 'main';
+@import 'user';

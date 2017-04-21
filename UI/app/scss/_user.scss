@@ -1,0 +1,27 @@
+.user-profile{
+  .user-info{
+    span{
+      display: inline-block;
+      vertical-align: middle;
+
+      &:first-child{
+        border: 1px solid $IMGBORDER;
+        border-radius: 50%;
+        margin-right:20px;
+        box-shadow: 0 1px 4px rgba(0,0,0,.5);
+      }
+
+      h3{
+        margin:0;
+      }
+
+      img{
+        padding: 5px;
+        border-radius: 50%;
+      }
+    }
+  }
+  p{
+    padding: 10px;
+  }
+}

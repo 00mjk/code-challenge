@@ -1,0 +1,89 @@
+.content(ng-controller='mainController')
+  .row
+    .notification
+      div.alert(role='alert' aria-hidden aria-live='polite' ng-repeat='alert in alerts' ng-class="'alert-' + (alert.type || 'warning')")
+        a(title='Close notification' href='' ng-click='closeNotification($index)') 
+          i.fa.fa-close
+        span {{alert.msg}}
+    .wrapper.col-md-6
+      .header
+        .header-title
+          span.fa.fa-credit-card
+          span future banking
+        .btn-group.info
+          button.btn(ng-click='gotoUserProfile()')
+            img(src='{{user.pic}}' alt='{{user.name}}\'s picture' width='20')
+            span {{user.name}}
+          button.btn Sign out
+            i.fa.fa-sign-out 
+      form(name='transferInfo' ng-submit='submit(transferInfo.$valid)' novalidate)
+        .body
+          section.account-details(ng-show='!isChangeRecipient')
+            span.title
+              strong From
+            table
+              tbody
+                tr
+                  td
+                    span Account Name:
+                  td
+                    span
+                      strong {{user.account.name | _:'capitalize'}}
+                tr
+                  td
+                    span Account Number:
+                  td
+                    span
+                      strong {{user.account.number}}
+                tr
+                  td
+                    span Current Balance:
+                  td
+                    span
+                      strong {{user.account.balance | currency}}
+          section.transfer-details.border-bottom(ng-show='!isChangeRecipient')
+            span.title
+              strong Transfer details
+            table
+              tbody
+                tr
+                  td
+                    spann Amount to transfer
+                  td
+                    input.form-control(type='number' 
+                      name='transferAmount' 
+                      ng-class='{error: transferInfo.transferAmount.$invalid && !transferInfo.transferAmount.$pristine}'
+                      ng-model='amount' 
+                      ng-min='1' 
+                      ng-max='{{user.account.balance < 1000 ? user.account.balance : "1000"}}' 
+                      placeholder='Amount you would like to send'
+                      required)
+                    span.error(role='alert' aria-hidden aria-live='polite' 
+                      ng-show='transferInfo.transferAmount.$invalid && !transferInfo.transferAmount.$pristine') Please enter a valid amount
+                tr
+                  td
+                    span Frequency
+                  td
+                    select.form-control(name='transferFrequency' 
+                      ng-class='{error: transferInfo.transferFrequency.$invalid}'
+                      ng-model='frequency' 
+                      required)
+                      option(ng-repeat='option in frequencies' value='{{option.id}}') {{option.name}}
+                     span.error(role='alert' aria-hidden aria-live='polite'
+                      ng-show='transferInfo.transferFrequency.$invalid && !transferInfo.transferFrequency.$pristine') Please select a valid frequency
+          section.transferee-details.border-bottom
+            span.title
+              strong Send to
+            .transferee(ng-repeat='candidate in users' ng-show='(isChangeRecipient && candidate.id !== user.id) || (!isChangeRecipient && candidate.id === transfer.id)')
+              .info
+                span.image
+                  img(src='{{candidate.pic}}' alt='{{candidate.name}}\'s picture' width='100')
+                span
+                  h3 {{candidate.name}}
+              .change-transferee
+                a(href='' ng-show='!isChangeRecipient' ng-click='goInChangeRecipient()') Change recipient
+                a(href='' ng-show='isChangeRecipient' ng-click='changeRecipient(candidate)' title="Select {{candidate.name}}") Select
+        .footer
+          .form-submit
+            button.btn.btn-primary(type='submit' ng-disabled='transferInfo.$invalid || isChangeRecipient') Send {{(amount || 0 ) | currency}}
+      

@@ -1,0 +1,53 @@
+{
+    "users":[{
+        "name":"Keanu Reeves",
+        "id":"KR01",
+        "pic":"//i.imgur.com/cAzuonB.jpg",
+        "description":"Keanu Charles Reeves; born September 2, 1964 is an American-Canadian actor, producer, and musician. Reeves is best known for his acting career, beginning in 1985 and spanning more than three decades. He gained fame for his starring role performances in several blockbuster films including comedies from the Bill and Ted franchise (1989–1991), action thrillers Point Break (1991) and Speed (1994), and the science fiction-action trilogy The Matrix (1999–2003). He has also appeared in dramatic films such as Dangerous Liaisons (1988), My Own Private Idaho (1991), and Little Buddha (1993), as well as the romantic horror Bram Stoker's Dracula (1992).",
+        "account":{
+            "name":"checking",
+            "number":"0987654321",
+            "balance":"5000"
+        }
+    },
+    {
+        "name":"Sasha Pieterse",
+        "id":"SP01",
+        "pic":"//i.imgur.com/P2aU96l.jpg",
+        "account":{
+            "name":"checking",
+            "number":"1029384567",
+            "balance":"11000"
+        }
+    },
+    {
+        "name":"Jake Gyllenhaal",
+        "id":"JG01",
+        "pic":"//i.imgur.com/AZwkK9b.jpg",
+        "account":{
+            "name":"saving",
+            "number":"8710249536",
+            "balance":"15000"
+        }
+    },
+    {
+        "name":"Beyonce",
+        "id":"QUEEN01",
+        "pic":"//i.imgur.com/vCuvZlx.jpg",
+        "account":{
+            "name":"saving",
+            "number":"209816534",
+            "balance":"25000"
+        }
+    },
+    {
+        "name":"Donald Trump",
+        "id":"DT01",
+        "pic":"//i.imgur.com/lQQfMIi.jpg",
+        "account":{
+            "name":"checking",
+            "number":"1234567890",
+            "balance":"50000"
+        }
+    }]
+}
